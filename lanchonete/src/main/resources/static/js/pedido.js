@@ -16,7 +16,7 @@ const lanches = [
   { id: 9, nome: "Queijo Nebuloso", preco: 25, img: "../assets/queijo-nebuloso.png" },
   { id: 10, nome: "Titã do Sabor", preco: 26, img: "../assets/tita-do-sabor.png" },
   { id: 11, nome: "X-Absoluto", preco: 30, img: "../assets/x-absoluto.png" },
-  { id: 12, nome: "X-Turbo", preco: 30, img: "../assets/x-turbo.png" },
+  { id: 12, nome: "X-Turbo", preco: 30, img: "../assets/x-turbo.png" }
 ];
 
 // Renderiza os lanches na grid
