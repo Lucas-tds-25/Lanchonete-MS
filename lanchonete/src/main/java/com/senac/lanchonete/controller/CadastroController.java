@@ -34,7 +34,8 @@ public class CadastroController {
     }
     
     @GetMapping("/lista")
-    public String lista() {
+    public String lista(Model model) {
+        model.addAttribute("cadastros", cadastroService.listarTodos());
         return "pedido";
     }
 }
