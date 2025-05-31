@@ -8,9 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/cadastro")
 
 public class CadastroController {
     @Autowired
@@ -30,12 +33,24 @@ public class CadastroController {
     @PostMapping ("/gravar")
     public String processarFormulario(@ModelAttribute Cadastro cadastro) {
         cadastroService.salvar(cadastro);
-        return "redirect:/pedido";
+        return "redirect:/cadastro/pedido";
     }
     
     @GetMapping("/lista")
     public String lista(Model model) {
         model.addAttribute("cadastros", cadastroService.listarTodos());
         return "pedido";
+    }
+    
+    @GetMapping ("/alterar/{id}")
+    public String alterar (@PathVariable int id, Model model) {
+        model.addAttribute("cadastro", cadastroService.buscarPorId(id));
+        return "pedido";
+    }
+    
+    @GetMapping ("/excluir/{id}")
+    public String excluir(@PathVariable int id) {
+        cadastroService.excluir(id);
+        return "redirect:/cadastro/pedido";
     }
 }
