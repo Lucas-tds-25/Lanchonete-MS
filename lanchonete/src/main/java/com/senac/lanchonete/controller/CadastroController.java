@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/cadastro")
+// @RequestMapping("/cadastro")
+@RequestMapping("")
 
 public class CadastroController {
     @Autowired
@@ -33,7 +34,7 @@ public class CadastroController {
     @PostMapping ("/gravar")
     public String processarFormulario(@ModelAttribute Cadastro cadastro) {
         cadastroService.salvar(cadastro);
-        return "redirect:/cadastro/pedido";
+        return "redirect:/cadastro/lista";
     }
     
     @GetMapping("/lista")
@@ -51,6 +52,6 @@ public class CadastroController {
     @GetMapping ("/excluir/{id}")
     public String excluir(@PathVariable int id) {
         cadastroService.excluir(id);
-        return "redirect:/cadastro/pedido";
+        return "redirect:/cadastro/lista";
     }
 }

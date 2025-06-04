@@ -7,12 +7,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
-import org.springframework.stereotype.Component;
+// import org.springframework.stereotype.Component;
 
 @Data
 @Entity
-@Table(name="Cadastro")
-@Component
+@Table(name="cadastro")
+// @Component
 
 public class Cadastro {
     @Id
