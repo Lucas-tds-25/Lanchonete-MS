@@ -20,10 +20,17 @@ public class CadastroController {
     @Autowired
     private CadastroService cadastroService;
     
-    @GetMapping ("/")
-    public String inicio() {
+//    @GetMapping ("/")
+//    public String inicio() {
+//        return "index";
+//    }
+    
+    @GetMapping("/")
+    public String inicio(Model model) {
+        model.addAttribute("cadastro", new Cadastro()); // ESSENCIAL
         return "index";
-    }
+}
+
     
     @GetMapping("/cadastro")
     public String exibirFormulario(Model model) {
