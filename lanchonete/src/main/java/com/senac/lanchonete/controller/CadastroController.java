@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-// @RequestMapping("/cadastro")
-@RequestMapping("")
+@RequestMapping("/cadastro")
+// @RequestMapping("")
 
 public class CadastroController {
     @Autowired
