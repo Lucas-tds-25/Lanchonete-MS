@@ -68,3 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+const cliente = {
+  nome: document.getElementById("nome").value,
+  usuario: document.getElementById("usuario").value,
+  senha: document.getElementById("senha").value,
+};
+localStorage.setItem("cliente_" + cliente.usuario, JSON.stringify(cliente));
+
