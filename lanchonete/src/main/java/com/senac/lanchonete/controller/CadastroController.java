@@ -13,17 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/cadastro")
-// @RequestMapping("")
+@RequestMapping("")
 
 public class CadastroController {
     @Autowired
     private CadastroService cadastroService;
-    
-//    @GetMapping ("/")
-//    public String inicio() {
-//        return "index";
-//    }
     
     @GetMapping("/")
     public String inicio(Model model) {
@@ -31,7 +25,6 @@ public class CadastroController {
         return "index";
 }
 
-    
     @GetMapping("/cadastro")
     public String exibirFormulario(Model model) {
         model.addAttribute("cadastro", new Cadastro());
@@ -41,7 +34,7 @@ public class CadastroController {
     @PostMapping ("/gravar")
     public String processarFormulario(@ModelAttribute Cadastro cadastro) {
         cadastroService.salvar(cadastro);
-        return "redirect:/cadastro/lista";
+        return "redirect:/lista";
     }
     
     @GetMapping("/lista")

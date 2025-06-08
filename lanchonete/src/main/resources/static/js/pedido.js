@@ -5,18 +5,18 @@ let clienteLogado = null;
 
 // Grid de lanches 
 const lanches = [
-  { id: 1, nome: "Boca Nervosa", preco: 27, img: "../assets/boca-nervosa.png" },
-  { id: 2, nome: "Brutal Burger", preco: 30, img: "../assets/brutal-burger.png" },
-  { id: 3, nome: "Burg Trovão", preco: 29, img: "../assets/burg-trovao.png" },
-  { id: 4, nome: "Crunch Master", preco: 25, img: "../assets/crunch-master.png" },
-  { id: 5, nome: "El Gran Toro", preco: 24, img: "../assets/el-gran-toro.png" },
-  { id: 6, nome: "Fome de Leão", preco: 25, img: "../assets/fome-de-leao.png" },
-  { id: 7, nome: "Giga Burger", preco: 29, img: "../assets/giga-burger.png" },
-  { id: 8, nome: "King Bacon", preco: 28, img: "../assets/king-bacon.png" },
-  { id: 9, nome: "Queijo Nebuloso", preco: 25, img: "../assets/queijo-nebuloso.png" },
-  { id: 10, nome: "Titã do Sabor", preco: 26, img: "../assets/tita-do-sabor.png" },
-  { id: 11, nome: "X-Absoluto", preco: 30, img: "../assets/x-absoluto.png" },
-  { id: 12, nome: "X-Turbo", preco: 30, img: "../assets/x-turbo.png" }
+  { id: 1, nome: "Boca Nervosa", preco: 27, img: "/assets/boca-nervosa.png" },
+  { id: 2, nome: "Brutal Burger", preco: 30, img: "/assets/brutal-burger.png" },
+  { id: 3, nome: "Burg Trovão", preco: 29, img: "/assets/burg-trovao.png" },
+  { id: 4, nome: "Crunch Master", preco: 25, img: "/assets/crunch-master.png" },
+  { id: 5, nome: "El Gran Toro", preco: 24, img: "/assets/el-gran-toro.png" },
+  { id: 6, nome: "Fome de Leão", preco: 25, img: "/assets/fome-de-leao.png" },
+  { id: 7, nome: "Giga Burger", preco: 29, img: "/assets/giga-burger.png" },
+  { id: 8, nome: "King Bacon", preco: 28, img: "/assets/king-bacon.png" },
+  { id: 9, nome: "Queijo Nebuloso", preco: 25, img: "/assets/queijo-nebuloso.png" },
+  { id: 10, nome: "Titã do Sabor", preco: 26, img: "/assets/tita-do-sabor.png" },
+  { id: 11, nome: "X-Absoluto", preco: 30, img: "/assets/x-absoluto.png" },
+  { id: 12, nome: "X-Turbo", preco: 30, img: "/assets/x-turbo.png" }
 ];
 
 // Renderiza os lanches na grid
